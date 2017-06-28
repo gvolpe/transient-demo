@@ -15,11 +15,13 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     IRCClient
+  exposed-modules:     IRCClient, DataSets
   build-depends:       base >= 4.7 && < 5
                      , transient
                      , transient-universe
                      , network
+                     , containers
+                     , vector
   default-language:    Haskell2010
 
 executable transient-demo-exe
@@ -31,6 +33,8 @@ executable transient-demo-exe
                      , transient-universe
                      , transient-demo
                      , network
+                     , containers
+                     , vector
   default-language:    Haskell2010
 
 test-suite transient-demo-test
